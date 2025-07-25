@@ -1,5 +1,9 @@
+
+import sys
+import os
 import schedule
 import time
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from main import main
 
 

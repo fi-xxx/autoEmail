@@ -32,4 +32,4 @@ Thumbs.db
 config.py.bak
 
 # IDE
-.idea/
+*.idea/
