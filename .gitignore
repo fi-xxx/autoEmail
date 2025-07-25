@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# VSCode
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Env
+.env
+venv/
+ENV/
+
+# Jupyter
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Others
+*.bak
+*.swp
+
+# Ignore secrets
+config.py.bak
+
+# IDE
+.idea/
