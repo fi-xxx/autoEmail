@@ -1,10 +1,12 @@
 from utils.logger import get_logger
-logger = get_logger('main')
+
 from utils.weather import get_weather
 
 from utils.funny_sentence import get_sentence
 
 from utils.mailer import send_email, build_html_report
+
+logger = get_logger('main')
 
 
 def main():
