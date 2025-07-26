@@ -40,6 +40,7 @@ def send_email(subject: str, text_content: str, html_content: str):
 def build_html_report(weather: str, sentence: str) -> str:
     today = datetime.date.today()
     weekday = ["一", "二", "三", "四", "五", "六", "日"][today.weekday()]
+    weather_html = weather.replace('\n', '<br/>')
 
     html = f"""
     <html>
@@ -82,7 +83,7 @@ def build_html_report(weather: str, sentence: str) -> str:
             <h2>📮 今日晨报~（{today} 周{weekday}）</h2>
             <div class="weather">
                 <strong>📌 今日天气：</strong><br/>
-                {weather.replace('\n', '<br/>')}
+                {weather_html}
             </div>
             <div class="sentence">
                 <strong>🌟 小记：</strong><br/>
