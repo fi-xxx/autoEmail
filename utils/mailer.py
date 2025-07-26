@@ -1,11 +1,13 @@
 from utils.logger import get_logger
-logger = get_logger('mailer')
+
 import datetime
 import smtplib
 import ssl
 from email.message import EmailMessage
 
 import config
+
+logger = get_logger('mailer')
 
 
 def send_email(subject: str, text_content: str, html_content: str):

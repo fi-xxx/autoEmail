@@ -25,14 +25,14 @@ def get_sentence():
     ]
 
     try:
-        url = config.FUNNY_SENTENCE_URRL
+        url = config.FUNNY_SENTENCE_URL
         response = requests.get(url, timeout=5)
         response.raise_for_status()
-        data = response.json()
-
+        # data = response.json()
+        data = response.text
         # 如果data结构异常，则fallback
-        if "data" in data and isinstance(data["data"], str):
-            return data["data"]
+        if isinstance(data, str):
+            return data
         else:
             raise ValueError("返回数据结构异常")
 
